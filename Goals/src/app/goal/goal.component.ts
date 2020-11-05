@@ -7,7 +7,6 @@ import { Goal } from '../goal';
   styleUrls: ['./goal.component.css']
 })
 export class GoalComponent implements OnInit {
-
   goals: Goal[] = [
     new Goal(1, 'Watch finding Nemo', 'Find an online version and watch merlin find his son',new Date(2020,3,14)),
     new Goal(2,'Buy Cookies','I have to buy cookies for the parrot',new Date(2019,6,9)),
@@ -20,12 +19,6 @@ export class GoalComponent implements OnInit {
   toggleDetails(index){
     this.goals[index].showDescription = !this.goals[index].showDescription;
   }
-
-  // completeGoal(isComplete, index){
-  //   if (isComplete) {
-  //     this.goals.splice(index,1);
-  //   }
-  // }
   
   deleteGoal(isComplete, index){
     if (isComplete) {
